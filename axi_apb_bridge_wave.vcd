@@ -1,0 +1,651 @@
+$date
+	Fri Oct  2 14:03:32 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module axi_apb_bridge_tb $end
+$var wire 1 ! wready $end
+$var wire 1 " rvalid $end
+$var wire 2 # rresp [1:0] $end
+$var wire 32 $ rdata [31:0] $end
+$var wire 1 % pwrite $end
+$var wire 32 & pwdata [31:0] $end
+$var wire 4 ' pstrb [3:0] $end
+$var wire 1 ( psel $end
+$var wire 1 ) penable $end
+$var wire 32 * paddr [31:0] $end
+$var wire 1 + bvalid $end
+$var wire 2 , bresp [1:0] $end
+$var wire 1 - awready $end
+$var wire 1 . arready $end
+$var parameter 32 / ADDR_WIDTH $end
+$var parameter 32 0 DATA_WIDTH $end
+$var reg 1 1 apb_error $end
+$var reg 32 2 apb_read_data [31:0] $end
+$var reg 32 3 araddr [31:0] $end
+$var reg 1 4 arvalid $end
+$var reg 32 5 awaddr [31:0] $end
+$var reg 1 6 awvalid $end
+$var reg 1 7 bready $end
+$var reg 1 8 clk $end
+$var reg 32 9 prdata [31:0] $end
+$var reg 1 : pready $end
+$var reg 1 ; pslverr $end
+$var reg 1 < rready $end
+$var reg 1 = rst $end
+$var reg 32 > wdata [31:0] $end
+$var reg 4 ? wstrb [3:0] $end
+$var reg 1 @ wvalid $end
+$var integer 32 A apb_access_count [31:0] $end
+$var integer 32 B apb_wait_cycles [31:0] $end
+$var integer 32 C last_apb_access_cycles [31:0] $end
+$scope module dut $end
+$var wire 1 D ar_fire $end
+$var wire 32 E araddr [31:0] $end
+$var wire 1 4 arvalid $end
+$var wire 1 F aw_fire $end
+$var wire 32 G awaddr [31:0] $end
+$var wire 1 6 awvalid $end
+$var wire 1 7 bready $end
+$var wire 1 8 clk $end
+$var wire 32 H prdata [31:0] $end
+$var wire 1 : pready $end
+$var wire 1 ; pslverr $end
+$var wire 1 I read_start $end
+$var wire 1 < rready $end
+$var wire 1 = rst $end
+$var wire 1 J w_fire $end
+$var wire 32 K wdata [31:0] $end
+$var wire 1 L write_start $end
+$var wire 4 M wstrb [3:0] $end
+$var wire 1 @ wvalid $end
+$var parameter 32 N ADDR_WIDTH $end
+$var parameter 32 O DATA_WIDTH $end
+$var reg 1 P apb_write_reg $end
+$var reg 32 Q araddr_reg [31:0] $end
+$var reg 1 R araddr_valid_reg $end
+$var reg 1 . arready $end
+$var reg 32 S awaddr_reg [31:0] $end
+$var reg 1 T awaddr_valid_reg $end
+$var reg 1 - awready $end
+$var reg 2 U bresp [1:0] $end
+$var reg 2 V bresp_reg [1:0] $end
+$var reg 1 + bvalid $end
+$var reg 32 W paddr [31:0] $end
+$var reg 1 ) penable $end
+$var reg 1 ( psel $end
+$var reg 4 X pstrb [3:0] $end
+$var reg 32 Y pwdata [31:0] $end
+$var reg 1 % pwrite $end
+$var reg 32 Z rdata [31:0] $end
+$var reg 32 [ rdata_reg [31:0] $end
+$var reg 2 \ rresp [1:0] $end
+$var reg 2 ] rresp_reg [1:0] $end
+$var reg 1 " rvalid $end
+$var reg 3 ^ state [2:0] $end
+$var reg 32 _ wdata_reg [31:0] $end
+$var reg 1 ` wdata_valid_reg $end
+$var reg 1 ! wready $end
+$var reg 4 a wstrb_reg [3:0] $end
+$upscope $end
+$scope task axi_read $end
+$upscope $end
+$scope task axi_write $end
+$upscope $end
+$scope task axi_write_split $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100000 O
+b100000 N
+b100000 0
+b100000 /
+$end
+#0
+$dumpvars
+bx a
+x`
+bx _
+bx ^
+bx ]
+bx \
+bx [
+bx Z
+bx Y
+bx X
+bx W
+bx V
+bx U
+xT
+bx S
+xR
+bx Q
+xP
+b0 M
+xL
+b0 K
+0J
+0I
+b10100101101001010001001000110100 H
+b0 G
+0F
+b0 E
+0D
+b0 C
+b0 B
+b0 A
+0@
+b0 ?
+b0 >
+1=
+0<
+0;
+0:
+b10100101101001010001001000110100 9
+08
+07
+06
+b0 5
+04
+b0 3
+b10100101101001010001001000110100 2
+01
+0.
+0-
+bx ,
+x+
+bx *
+x)
+x(
+bx '
+bx &
+x%
+bx $
+bx #
+x"
+0!
+$end
+#5000
+0L
+1.
+1!
+1-
+0)
+0(
+0%
+b0 '
+b0 X
+b0 &
+b0 Y
+b0 *
+b0 W
+b0 #
+b0 \
+b0 $
+b0 Z
+b0 ,
+b0 U
+0"
+0+
+b0 ]
+b0 [
+b0 V
+0P
+0R
+b0 Q
+0`
+b0 a
+b0 _
+0T
+b0 S
+b0 ^
+18
+#10000
+08
+#15000
+0=
+18
+#20000
+1L
+1J
+1F
+0.
+1!
+1-
+1@
+b1111 ?
+b1111 M
+b11011110101011011011111011101111 >
+b11011110101011011011111011101111 K
+16
+b1000000000000 5
+b1000000000000 G
+08
+#25000
+0L
+0J
+0F
+1(
+1%
+b1111 '
+b1111 X
+b11011110101011011011111011101111 &
+b11011110101011011011111011101111 Y
+b1000000000000 *
+b1000000000000 W
+0!
+0-
+b1 ^
+1P
+0`
+b1111 a
+b11011110101011011011111011101111 _
+0T
+b1000000000000 S
+18
+#30000
+0@
+06
+08
+#35000
+1:
+1)
+b10 ^
+18
+#40000
+08
+#45000
+0)
+0(
+1+
+0:
+b11 ^
+b1 C
+b1 A
+18
+#50000
+17
+08
+#55000
+1.
+1!
+1-
+0+
+b0 A
+b0 ^
+18
+#60000
+b10010001101000101011001111000 9
+b10010001101000101011001111000 H
+b10010001101000101011001111000 2
+07
+08
+#65000
+18
+#70000
+1I
+1D
+14
+b10000000000000 3
+b10000000000000 E
+08
+#75000
+0D
+0I
+1(
+0%
+b10000000000000 *
+b10000000000000 W
+0.
+0!
+0-
+b1 ^
+0P
+0R
+b10000000000000 Q
+18
+#80000
+04
+08
+#85000
+1:
+1)
+b10 ^
+18
+#90000
+08
+#95000
+0:
+0)
+0(
+b10010001101000101011001111000 $
+b10010001101000101011001111000 Z
+1"
+b1 A
+b100 ^
+b10010001101000101011001111000 [
+18
+#100000
+1<
+08
+#105000
+1.
+1!
+1-
+0"
+b0 ^
+b0 A
+18
+#110000
+0<
+08
+#115000
+18
+#120000
+1F
+0.
+1!
+1-
+16
+b10010100000000 5
+b10010100000000 G
+08
+#125000
+0F
+1!
+0-
+1T
+b10010100000000 S
+18
+#130000
+1!
+06
+08
+#135000
+18
+#140000
+1L
+1J
+1!
+1@
+b10001001000100011001101000100 >
+b10001001000100011001101000100 K
+08
+#145000
+0L
+0J
+1(
+1%
+b10001001000100011001101000100 &
+b10001001000100011001101000100 Y
+b10010100000000 *
+b10010100000000 W
+0!
+b1 ^
+0T
+1P
+0`
+b10001001000100011001101000100 _
+18
+#150000
+0@
+08
+#155000
+1:
+1)
+b10 ^
+18
+#160000
+08
+#165000
+0)
+0(
+1+
+0:
+b11 ^
+b1 A
+18
+#170000
+17
+08
+#175000
+1.
+1!
+1-
+0+
+b0 A
+b0 ^
+18
+#180000
+b10000111011001010100001100100001 9
+b10000111011001010100001100100001 H
+b10000111011001010100001100100001 2
+b10 B
+07
+08
+#185000
+18
+#190000
+1I
+1D
+14
+b10011000000000 3
+b10011000000000 E
+08
+#195000
+0D
+0I
+1(
+0%
+b10011000000000 *
+b10011000000000 W
+0.
+0!
+0-
+b1 ^
+0P
+0R
+b10011000000000 Q
+18
+#200000
+04
+08
+#205000
+1)
+b10 ^
+18
+#210000
+08
+#215000
+b1 A
+18
+#220000
+08
+#225000
+1:
+b10 A
+18
+#230000
+08
+#235000
+0:
+0)
+0(
+b10000111011001010100001100100001 $
+b10000111011001010100001100100001 Z
+1"
+b11 C
+b11 A
+b100 ^
+b10000111011001010100001100100001 [
+18
+#240000
+1<
+08
+#245000
+1.
+1!
+1-
+0"
+b0 ^
+b0 A
+18
+#250000
+1;
+11
+b0 B
+0<
+08
+#255000
+18
+#260000
+1L
+1J
+1F
+0.
+1!
+1-
+1@
+b11001010111111101011101010111110 >
+b11001010111111101011101010111110 K
+16
+b11000000000000 5
+b11000000000000 G
+08
+#265000
+0L
+0J
+0F
+1(
+1%
+b11001010111111101011101010111110 &
+b11001010111111101011101010111110 Y
+b11000000000000 *
+b11000000000000 W
+0!
+0-
+b1 ^
+1P
+0`
+b11001010111111101011101010111110 _
+0T
+b11000000000000 S
+18
+#270000
+0@
+06
+08
+#275000
+1:
+1)
+b10 ^
+18
+#280000
+08
+#285000
+0)
+0(
+b10 ,
+b10 U
+1+
+0:
+b11 ^
+b10 V
+b1 C
+b1 A
+18
+#290000
+17
+08
+#295000
+1.
+1!
+1-
+0+
+b0 A
+b0 ^
+18
+#300000
+b11111010110011101100101011111110 9
+b11111010110011101100101011111110 H
+b11111010110011101100101011111110 2
+07
+08
+#305000
+18
+#310000
+1I
+1D
+14
+b100000000000000 3
+b100000000000000 E
+08
+#315000
+0D
+0I
+1(
+0%
+b100000000000000 *
+b100000000000000 W
+0.
+0!
+0-
+b1 ^
+0P
+0R
+b100000000000000 Q
+18
+#320000
+04
+08
+#325000
+1:
+1)
+b10 ^
+18
+#330000
+08
+#335000
+0:
+0)
+0(
+b10 #
+b10 \
+b11111010110011101100101011111110 $
+b11111010110011101100101011111110 Z
+1"
+b1 A
+b100 ^
+b10 ]
+b11111010110011101100101011111110 [
+18
+#340000
+1<
+08
+#345000
+1.
+1!
+1-
+0"
+b0 ^
+b0 A
+18
+#350000
+0;
+01
+0<
+08
+#355000
+18
+#360000
+08
+#365000
+18
+#370000
+08
